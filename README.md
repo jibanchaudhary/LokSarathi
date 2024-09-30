@@ -6,11 +6,11 @@ The Loksarathi pre-login interface is designed with a clean and responsive layou
 
 Technical Features:
 
-Search Functionality: Implemented with an input field that enables users to search for notes stored in the MySQL database. Search queries are processed via Django views and filtered with Django ORM.
+1. Search Functionality: Implemented with an input field that enables users to search for notes stored in the MySQL database. Search queries are processed via Django views and filtered with Django ORM.
 
-Modular Components: The interface utilizes a modular card-based layout for organizing sections like Study Materials, Practice Tests, and Notices. These sections are dynamically populated through back-end models.
+2. Modular Components: The interface utilizes a modular card-based layout for organizing sections like Study Materials, Practice Tests, and Notices. These sections are dynamically populated through back-end models.
 
-User Authentication: The navigation bar provides options for Sign In and Register, leveraging Django's built-in authentication system.
+3. User Authentication: The navigation bar provides options for Sign In and Register, leveraging Django's built-in authentication system.
 
 <img width="1469" alt="Screenshot 2024-09-30 at 11 36 56 AM" src="https://github.com/user-attachments/assets/904a5a75-8fcd-4c5d-96dc-21450cceba38">
 
