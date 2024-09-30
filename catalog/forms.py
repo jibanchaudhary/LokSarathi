@@ -24,9 +24,3 @@ class addQuestionform(ModelForm):
 
 
 
-# Creating a form for uploading past questions
-
-# class addPrev_qstn(ModelForm):
-#     class Meta:
-#         model = Previousyearqstnmodel
-#         fields=['rank','title',]
