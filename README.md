@@ -1,0 +1,1 @@
+Loksarathi is an educational application offering reference books, quizzes, PDFs, and notices related to Lok Sewa. It serves as a comprehensive resource platform to help users prepare for educational and competitive exams.
