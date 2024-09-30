@@ -1,24 +1,17 @@
 # .gitignore
-# Python files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Environment variables
 .env
 
-# Django migrations
 */migrations/
 
-# Database files
 *.db
 
-# VSCode
 .vscode/
 
-# macOS system files
 .DS_Store
 
-# media files
 media/
