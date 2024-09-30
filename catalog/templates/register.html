@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #495057;
+        }
+
+        .form-footer {
+            margin-top: 10px;
+        }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Password Dropdown Styling */
+        .dropdown-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-btn {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #495057;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+        }
+
+        .dropdown-content p {
+            font-size: 14px;
+            color: #495057;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h1>Register now!</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{RegisterForm.as_p}}
+
+            <!-- Dropdown Button for Password Requirements -->
+        
+
+            <input type="submit" value="Signup"/>
+        </form>
+
+        <div class="form-footer">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("password-requirements");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

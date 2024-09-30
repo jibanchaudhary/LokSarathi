@@ -1,0 +1,88 @@
+<!--base.html -->
+<!--Just using this as temp for index.html document-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loksewa Sarathi</title>
+    <meta name="description" content="Guide for Loksewa appearing student">
+    <meta name="viewport" content ="width=device-width ,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+
+
+    <!--NAVBAR SECTION-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href={% url 'MCQ' %}>Loksewa Sarthi</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          {% comment %} <a class="navbar-brand" href="{% url 'constitution' %}">नेपालको संविधान</a> {% endcomment %}
+          <a href="/media/Nepal_constitution/ConstitutionNepal2072.pdf" class="btn btn-view mt-auto" target="_blank">नेपालको संविधान</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'syllabus' %}">Syllabus</a>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'books' %}>Study Materials</a>
+                </li>
+                
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Previous Year Question
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'officerlevel' %}">Officer level</a>
+                        <a class="dropdown-item" href="{% url 'Sectionofficer' %}">Section officer level</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'MCQ' %}">Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notices</a>
+            </ul>
+            <div class="d-flex ms-auto">
+                <a href="{% url 'logout' %}" class="btn btn-outline-dark me-2">Logout</a>
+            </div>
+            
+        </div>
+    </nav>
+
+
+<!-- Base content -->
+<footer class="footer mt-5 py-3 bg-light">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <p><strong>Education Tools</strong></p>
+                <ul class="list-unstyled">
+                    <li><a href="#">chatpdf</a></li>
+                    <li><a href="#">ilovepdf</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <p><strong>Support</strong></p>
+                <ul class="list-unstyled">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Upload Notes</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <p><strong>Contact Us</strong></p>
+                <ul class="list-unstyled">
+                    <li><a href="tel:+977980">+977 980</a></li>
+                    <li><a href="mailto:Loksarthi@gmail.com">Loksarthi@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer> 

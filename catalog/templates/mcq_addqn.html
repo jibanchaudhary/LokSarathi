@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Poppins', sans-serif;
+        }
+        .jumbotron {
+            padding: 2rem;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Add Question</h1>
+        <div class="card card-body">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}  <!-- in views.py the addQuestionform context is passed as dictionary form-->
+                <div class="text-center">
+                    <input type="submit" class="btn-submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

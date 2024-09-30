@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #495057;
+        }
+
+        .form-footer {
+            margin-top: 10px;
+        }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Please login to continue</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ LoginForm.as_p }}
+
+            <input type="submit" value="Login"/>
+        </form>
+
+        <div class="form-footer">
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
